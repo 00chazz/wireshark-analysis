@@ -26,41 +26,41 @@ This project demonstrates the use of Wireshark, a powerful network packet analyz
 
 ### Step 1: Setup Wireshark
 - **Installation**:
-  - Download and install Wireshark from the official website.
-  - *Screenshot: Installation process.*
+  - Download and install Wireshark from the official website on a Windows 10 machine.
+  - **Screenshot**: Show the successful completion of the Wireshark installation.
 
 - **Configure Network Interface for Capture**:
-  - Select the appropriate network interface for traffic capture.
-  - *Screenshot: Interface selection.*
+  - Select the appropriate network interface for traffic capture in Wireshark.
+  - **Screenshot**: Display the Wireshark interface selection screen.
 
-### Step 2: Capture Network Traffic
+### Step 2: Capture and Analyze Network Traffic
 - **Capture ICMP Traffic**:
-  - Analyze ping requests and replies within a local network and to external hosts.
-  - *Screenshot: ICMP traffic capture.*
+  - Use Wireshark to capture ICMP traffic while pinging known IPs both within and outside the network.
+  - **Screenshot**: Capture the Wireshark screen showing ICMP traffic details, including request and reply packets.
 
 - **Capture SSH Traffic**:
-  - Observe SSH session establishment and command exchanges.
-  - *Screenshot: SSH traffic capture.*
+  - Record SSH session traffic by logging into a remote server via SSH while Wireshark is running.
+  - **Screenshot**: Display SSH packets, highlighting the handshake and data encryption stages.
 
 - **Capture DHCP Traffic**:
-  - Monitor the process of a client obtaining a dynamic IP address from a DHCP server.
-  - *Screenshot: DHCP traffic analysis.*
+  - Observe the DHCP lease process by releasing and renewing an IP address on a client machine.
+  - **Screenshot**: Show DHCP DISCOVER, OFFER, REQUEST, and ACK packets in Wireshark.
 
 - **Capture DNS Traffic**:
-  - Trace DNS lookups to understand how domain names are resolved into IP addresses.
-  - *Screenshot: DNS traffic capture.*
+  - Analyze DNS resolution traffic by using `nslookup` for various domain names.
+  - **Screenshot**: Illustrate DNS query and response packets in Wireshark.
 
 - **Capture RDP Traffic**:
-  - Analyze the continuous flow of traffic generated during a remote desktop session.
-  - *Screenshot: RDP traffic capture.*
+  - Monitor traffic during a Remote Desktop session to observe the continuous data flow.
+  - **Screenshot**: Highlight RDP packets showcasing the session initiation and data transmission.
 
-### Step 3: Analyze Captured Traffic
-- **Detailed Analysis of Protocols**:
-  - Use Wireshark's tools and filters to dig deep into each packet, examining headers and payloads.
-  - *Screenshot: Detailed protocol analysis.*
+### Step 3: Document Findings and Conclusions
+- **Analysis Summary**:
+  - Discuss the implications of the observed traffic patterns, particularly focusing on security and network efficiency.
+  - **Screenshot**: Optional, include graphs or tables summarizing the traffic analysis.
 
 ## Conclusion
-Through the detailed capture and analysis of network traffic using Wireshark, this project helps in understanding how different network protocols operate in real-time. It provides insights into network security, efficiency, and troubleshooting, crucial for network management and cybersecurity.
+Using Wireshark for network traffic analysis provides valuable insights into network operations, security vulnerabilities, and troubleshooting. This project showcases the utility of detailed packet analysis in understanding and securing network environments.
 
 ## Connect with Me
-- *LinkedIn:* [https://www.linkedin.com/in/chazz-c-382a75122/](#)
+- **LinkedIn:** [Chazz Conino](https://www.linkedin.com/in/chazz-c-382a75122/)
