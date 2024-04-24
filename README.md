@@ -1,44 +1,66 @@
-<h1>Network Traffic Analysis with Wireshark</h1>
+# Network Traffic Analysis with Wireshark
 
-<h2>Overview</h2>
-This project involved the use of Wireshark in order to analyze various types of network traffic, including ICMP, SSH, DHCP, DNS, and RDP protocols.
+## Overview
+This project demonstrates the use of Wireshark, a powerful network packet analyzer, to capture and analyze various types of network traffic. The aim is to understand network behavior, troubleshoot network problems, and gain insights into network security and performance based on real traffic scenarios.
 
-- <h2>Environments and Technologies Used</h2>
-- <b>Microsoft Azure:</b> Azure Virtual Machines </b>
-- <b>Remote Desktop</b>
-- <b>Active Directory Domain Services</b>
-- <b>PowerShell</b>
-- <b>Operating Systems: </b>
-  - Windows Server 2022
+## Environments and Technologies Used
+- **Wireshark**: Network protocol analyzer
+- **Operating Systems Used**:
   - Windows 10
-- <h2>High-Level Deployment and Configuration Steps</h2>
-1. <b>Prepare Azure environment: </b>
-   - Set up Azure Virtual Machines for the domain controller and member servers.
-2. <b>Install and Configure Active Directory: </b>
-   - Install Active Directory Domain Services on the designated VM.
-   - Promote the VM to a domain controller.
-3. <b>Configure Networking and Firewall Settings: </b>
-   - Adjust network settings to allow proper AD operations across the network.
-4. <b>Validation and Testing: </b>
-   - Perform system checks and validate AD functionalities within Azure.
-  
-- <h2>Detailed Deployment and Configuration Steps</h2>
-1. <b>Azure Setup: </b>
-   - Create Resource Groups:
-     
-   - Configure Virtual Network Settings:
-  
-2. <b>Active Directory Installation </b>
-   - Install AD Domain Services on a new VM:
-     
-   - Promote the VM to a domain controller:
-     
-3. <b>Network Configuration </b>
-   - Adjust DNS settings for AD operations:
-  
-   - Set up Firewall rules for secure AD communication:
-  
-4. <b>System Testing </b>
-   - User Creation and Role Assignments:
-     
-   - Test Authentication and Authorization:
+- **Network Protocols Analyzed**:
+  - ICMP (Internet Control Message Protocol)
+  - SSH (Secure Shell)
+  - DHCP (Dynamic Host Configuration Protocol)
+  - DNS (Domain Name System)
+  - RDP (Remote Desktop Protocol)
+
+## High-Level Analysis Steps
+1. **Setup Wireshark on Windows 10**:
+   - Install Wireshark and configure it to capture traffic on a designated network interface.
+2. **Capture Network Traffic**:
+   - Perform captures for different types of network traffic, including ICMP, SSH, DHCP, DNS, and RDP.
+3. **Analyze Captured Traffic**:
+   - Examine the details of each protocol's operation and behavior under various conditions.
+
+## Detailed Analysis and Configuration Steps
+
+### Step 1: Setup Wireshark
+- **Installation**:
+  - Download and install Wireshark from the official website.
+  - *Screenshot: Installation process.*
+
+- **Configure Network Interface for Capture**:
+  - Select the appropriate network interface for traffic capture.
+  - *Screenshot: Interface selection.*
+
+### Step 2: Capture Network Traffic
+- **Capture ICMP Traffic**:
+  - Analyze ping requests and replies within a local network and to external hosts.
+  - *Screenshot: ICMP traffic capture.*
+
+- **Capture SSH Traffic**:
+  - Observe SSH session establishment and command exchanges.
+  - *Screenshot: SSH traffic capture.*
+
+- **Capture DHCP Traffic**:
+  - Monitor the process of a client obtaining a dynamic IP address from a DHCP server.
+  - *Screenshot: DHCP traffic analysis.*
+
+- **Capture DNS Traffic**:
+  - Trace DNS lookups to understand how domain names are resolved into IP addresses.
+  - *Screenshot: DNS traffic capture.*
+
+- **Capture RDP Traffic**:
+  - Analyze the continuous flow of traffic generated during a remote desktop session.
+  - *Screenshot: RDP traffic capture.*
+
+### Step 3: Analyze Captured Traffic
+- **Detailed Analysis of Protocols**:
+  - Use Wireshark's tools and filters to dig deep into each packet, examining headers and payloads.
+  - *Screenshot: Detailed protocol analysis.*
+
+## Conclusion
+Through the detailed capture and analysis of network traffic using Wireshark, this project helps in understanding how different network protocols operate in real-time. It provides insights into network security, efficiency, and troubleshooting, crucial for network management and cybersecurity.
+
+## Connect with Me
+- *LinkedIn:* [https://www.linkedin.com/in/chazz-c-382a75122/](#)
