@@ -62,9 +62,6 @@ This project demonstrates the use of Wireshark, a powerful network packet analyz
 
 
 ## Conclusion
-This project uses Wireshark to provide deep insights into the functionality and security of network protocols within a virtualized environment. By analyzing traffic patterns and responses, this setup enhances understanding of network security, efficiency, and operational challenges.
-
-## Conclusion
 Using Wireshark for network traffic analysis provides valuable insights into network operations, security vulnerabilities, and troubleshooting. This project showcases the utility of detailed packet analysis in understanding and securing network environments.
 
 ## Connect with Me
