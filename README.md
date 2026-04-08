@@ -117,6 +117,3 @@ By completing this project, I gained hands-on experience using Wireshark to insp
 - how security settings can affect network communication
 
 This project gave me practical exposure to the kind of diagnostic thinking used in IT support, networking, and security-related roles.
-
-## Connect with Me
-- **LinkedIn:** [Chazz Conino](https://www.linkedin.com/in/chazz-c-382a75122/)
