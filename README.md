@@ -1,68 +1,122 @@
 # Network Traffic Analysis with Wireshark
 
 ## Overview
-This project demonstrates the use of Wireshark, a powerful network packet analyzer, to capture and analyze various types of network traffic within a virtual network environment hosted on Azure. The focus is on understanding network behavior through protocols such as ICMP, SSH, DHCP, DNS, and RDP.
+This project documents my use of Wireshark to capture and analyze network traffic in a cloud-hosted lab environment built in Microsoft Azure. I used Windows and Ubuntu virtual machines to generate and inspect traffic across several common protocols, including ICMP, SSH, DHCP, DNS, and RDP.
+
+The goal of this project was to better understand how network communication behaves at the packet level and to build hands-on experience with troubleshooting connectivity and protocol-related issues.
+
+## What This Project Shows
+- Basic network troubleshooting and packet analysis
+- Familiarity with common protocols including ICMP, SSH, DHCP, DNS, and RDP
+- Ability to capture and inspect traffic to understand connectivity behavior
+- Hands-on exposure to diagnostic tools used in IT support and networking
+- Better understanding of how network settings and security controls affect communication
 
 ## Environments and Technologies Used
-- **Wireshark**: Network protocol analyzer
-- **Microsoft Azure**: Virtual Machines for Windows 10 and Ubuntu
-- **Operating Systems Used**:
-  - Windows 10 (for capturing traffic)
-  - Ubuntu (as a secondary system to generate network activities)
+- **Wireshark**
+- **Microsoft Azure**: Virtual Machines, Virtual Network
+- **Windows 10** (traffic capture)
+- **Ubuntu** (secondary host for network activity generation)
 
 ## High-Level Analysis Steps
-1. **Setup Virtual Machines in Azure**:
-   - Configure VMs within a resource group and virtual network to simulate network interactions.
-2. **Install and Configure Wireshark**:
-   - Prepare Wireshark on the Windows 10 VM to capture network traffic.
-3. **Capture and Analyze Network Traffic**:
-   - Conduct detailed traffic analysis across multiple protocols to diagnose behaviors and security implications.
+1. Create Windows and Ubuntu virtual machines in Azure
+2. Install and configure Wireshark on the Windows machine
+3. Generate traffic between systems
+4. Capture and analyze protocol behavior across multiple scenarios
+5. Observe how connectivity and security settings affect traffic flow
+
+---
 
 ## Detailed Analysis and Configuration Steps
 
-### Step 1: Setup Virtual Machines in Azure
-- **Create Resource Group and Virtual Network**:
-  - Establish a resource group and a virtual network in Azure, adding both Windows 10 and Ubuntu VMs to simulate a mixed network environment.
-  - Azure dashboard showing the resource group, VMs, and network configurations:
-    ![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/ce75a80b-3b1f-4f2b-8e75-18d7e1a4b252)
+### Step 1: Set Up the Azure Lab Environment
+I created a resource group and virtual network in Azure, then deployed both a Windows 10 virtual machine and an Ubuntu virtual machine to simulate network communication in a small lab environment.
 
+This made it possible to generate and inspect traffic between systems in a controlled setting.
+
+![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/ce75a80b-3b1f-4f2b-8e75-18d7e1a4b252)
+
+<br />
 
 ### Step 2: Install and Configure Wireshark
-- **Installation on Windows 10 VM**:
-  - Download and install Wireshark on the Windows 10 VM. Configure it to monitor the virtual network interface.
-  - Once Wireshark is installed, we can monitor the traffic by pressing the blue button:
-    ![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/139ce3e8-cebd-4e07-8d94-762f373720f7)
+I installed Wireshark on the Windows 10 virtual machine and configured it to monitor the active network interface.
 
+This step provided hands-on experience with preparing a system for packet capture and protocol inspection.
 
-### Step 3: Capture and Analyze Network Traffic
-- **Observe ICMP Traffic**:
-  - Capture ICMP traffic as you ping from Windows 10 to Ubuntu VM, and observe both request and reply packets. Manipulate Network Security Group settings to see changes in ICMP traffic visibility.
-  - We can see Wireshark capturing ICMP traffic when we ping the Ubuntu Server's Private IP:
-  ![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/c269f931-3742-46ea-8e8f-52b98ea1e965)
+![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/139ce3e8-cebd-4e07-8d94-762f373720f7)
 
-- **Monitor SSH Traffic**:
-  - Capture SSH traffic from the Windows VM to the Ubuntu VM, detailing the SSH handshake and session data.
-    ![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/913526fc-f5b3-4721-bcd0-f96b75eea927)
+<br />
 
+### Step 3: Analyze ICMP Traffic
+I captured ICMP traffic by pinging the Ubuntu VM from the Windows machine. I reviewed request and reply packets and also adjusted Azure Network Security Group settings to observe how security controls affected visibility and connectivity.
 
-- **Track DHCP Traffic**:
-  - Record DHCP traffic during a lease renewal process executed from the Windows VM.
-  - ![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/9f441525-3182-4d4f-a74d-2af8a747596e)
+This helped reinforce:
+- basic connectivity testing
+- packet-level troubleshooting
+- the effect of firewall/security rules on network communication
 
+![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/c269f931-3742-46ea-8e8f-52b98ea1e965)
 
-- **Analyze DNS Traffic**:
-  - Capture DNS resolution traffic as the Windows VM performs nslookup operations for domains like google.com and disney.com.
-    ![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/1c9f35a5-20ab-4968-8634-9e49b98054e5)
+<br />
 
+### Step 4: Monitor SSH Traffic
+I captured SSH traffic from the Windows VM to the Ubuntu VM and reviewed the traffic generated by the connection.
 
-- **Examine RDP Traffic**:
-  - Observe and analyze RDP traffic between the Windows VM and another remote system to understand the continuous traffic flow typical for RDP sessions.
-  - The flow is constant as the Remote Desktop is constantly being streamed to the host computer:
-    ![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/ad664b47-9975-44ae-b78a-853542a5e684)
+This helped me better understand:
+- remote access traffic
+- encrypted connection behavior
+- how protocol activity appears during remote administration
 
+![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/913526fc-f5b3-4721-bcd0-f96b75eea927)
 
-## Conclusion
-Using Wireshark for network traffic analysis provides valuable insights into network operations, security vulnerabilities, and troubleshooting. This project showcases the utility of detailed packet analysis in understanding and securing network environments.
+<br />
+
+### Step 5: Track DHCP Traffic
+I observed DHCP traffic during a lease renewal process from the Windows system.
+
+This helped me understand:
+- how IP configuration is renewed
+- the role DHCP plays in client network connectivity
+- what DHCP exchanges look like in packet captures
+
+![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/9f441525-3182-4d4f-a74d-2af8a747596e)
+
+<br />
+
+### Step 6: Analyze DNS Traffic
+I captured DNS traffic while performing `nslookup` requests for domains such as `google.com` and `disney.com`.
+
+This gave me practice with:
+- name resolution troubleshooting
+- understanding DNS query/response behavior
+- seeing how hostname lookup activity appears in packet captures
+
+![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/1c9f35a5-20ab-4968-8634-9e49b98054e5)
+
+<br />
+
+### Step 7: Examine RDP Traffic
+I observed RDP traffic to understand the steady packet flow generated during a remote desktop session.
+
+This helped reinforce:
+- how remote access traffic differs from simpler request/response protocols
+- why RDP produces continuous communication
+- how packet analysis can support troubleshooting of remote desktop connections
+
+![image](https://github.com/00chazz/wireshark-analysis/assets/63687898/ad664b47-9975-44ae-b78a-853542a5e684)
+
+---
+
+## Outcome
+By completing this project, I gained hands-on experience using Wireshark to inspect real protocol behavior and understand common network communication patterns. It strengthened my understanding of:
+
+- connectivity testing
+- DNS and DHCP behavior
+- remote access protocols
+- packet-level troubleshooting
+- how security settings can affect network communication
+
+This project gave me practical exposure to the kind of diagnostic thinking used in IT support, networking, and security-related roles.
 
 ## Connect with Me
 - **LinkedIn:** [Chazz Conino](https://www.linkedin.com/in/chazz-c-382a75122/)
